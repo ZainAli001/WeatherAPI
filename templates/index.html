@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/slate/bootstrap.min.css" integrity="sha384-8iuq0iaMHpnH2vSyvZMSIqQuUnQA7QM+f6srIdlgBrTSEyd//AWNMyEaSF2yPzNQ" crossorigin="anonymous">
+</head>
+<body >
+    <div class="text-center my-3">
+        <h1>Weather App</h1>
+        <form action="/" method="post" id="weatherForm">
+            <input type="text" id="cityName" name="cityName" placeholder="Enter city">
+            <input type="text" id="stateName"  name ="stateName" placeholder="Enter state" >
+            <input type="text" id="countryName" placeholder="Enter Country"  name="countryName" >
+            <button>Find</button>
+            
+        </form>
+        {% if data %}
+        <div>
+            {{data}}
+
+        </div>
+        
+        {% endif %}
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById('weatherForm').reset();
+        };
+    </script>
+</body>
+</html>
